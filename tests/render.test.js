@@ -39,9 +39,7 @@ test("values cannot inject markup, script links or styles", () => {
     links: [{ label: "<b>x</b>", url: "javascript:alert(1)" }, { label: "ok", url: "https://example.org/?a=1&b=<2>" },
       { url: "data:text/html,<script>" }],
   }, "https://links.example.com/x");
-  assert.doesNotMatch(html, /<script>/);
-  assert.doesNotMatch(html, /javascript:/);
-  assert.doesNotMatch(html, /data:text/);
+  for (const forbidden of ["<script", "javascript:", "data:text"]) assert.ok(!html.includes(forbidden), forbidden);
   assert.match(html, /&lt;script&gt;alert\(1\)&lt;\/script&gt;/);
   assert.match(html, /--accent: #2f6fe4;/);
   assert.match(html, /href="https:\/\/example.org\/\?a=1&amp;b=%3C2%3E"/);

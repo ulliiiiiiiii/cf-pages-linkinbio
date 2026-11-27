@@ -85,8 +85,8 @@ reads per day.
 ## Development
 
 ```sh
-node --test tests/      # the renderer and the function, with a fake KV
-pytest                  # sync.py: checks, bulk write, prune, error messages without the token
+node --test tests/*.test.js   # the renderer and the function, with a fake KV
+pytest                        # sync.py: checks, bulk write, prune, error messages without the token
 ruff check .
 ```
 
