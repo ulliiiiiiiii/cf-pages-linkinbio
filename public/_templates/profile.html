@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{BIO}}">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{BIO}}">
+  <meta property="og:url" content="{{PAGE_URL}}">
+  <link rel="canonical" href="{{PAGE_URL}}">
+  <style>
+    :root { --accent: {{ACCENT}}; --bg: #f4f6fa; --card: #ffffff; --text: #182030; --muted: #5d6675; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0f1218; --card: #181d27; --text: #e8ebf1; --muted: #9aa3b2; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
+      font: 16px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 480px; margin: 0 auto; padding: 48px 20px 32px; text-align: center; }
+    .avatar { display: inline-grid; place-items: center; width: 96px; height: 96px; border-radius: 50%;
+      object-fit: cover; background: var(--accent); color: #fff; font-size: 34px; font-weight: 700; }
+    h1 { font-size: 1.5rem; margin: 16px 0 6px; }
+    .bio { color: var(--muted); margin: 0 0 28px; }
+    ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    .link { display: block; padding: 15px 18px; border-radius: 14px; background: var(--card); color: var(--text);
+      text-decoration: none; font-weight: 600; border: 2px solid var(--accent);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); }
+    .link:hover, .link:focus-visible { background: var(--accent); color: #fff; outline: none; }
+  </style>
+</head>
+<body>
+  <main>
+    {{AVATAR}}
+    <h1>{{NAME}}</h1>
+    <p class="bio">{{BIO}}</p>
+    <ul>
+      {{LINKS}}
+    </ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "Jane Doe",
+  "title": "Jane Doe, illustrator",
+  "bio": "Illustrations for books and games. Commissions open in spring.",
+  "accent": "#d9480f",
+  "links": [
+    {"label": "Portfolio", "url": "https://example.com/portfolio"},
+    {"label": "Shop: prints and stickers", "url": "https://example.com/shop"},
+    {"label": "Newsletter", "url": "https://example.com/newsletter"},
+    {"label": "Write to me", "url": "mailto:jane@example.com"}
+  ]
+}
